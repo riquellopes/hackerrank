@@ -1,6 +1,6 @@
 """
-    >>> capitalize("hello word")
-    'Hello Word'
+    >>> capitalize("hello world")
+    'Hello World'
     >>> capitalize("12abc")
     '12abc'
     >>> capitalize("1 2 3 4 5 6 8")
