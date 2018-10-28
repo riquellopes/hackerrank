@@ -4,6 +4,8 @@
     10 14
     >>> miniMaxSum([7, 69, 2, 221, 8974])
     299 9271
+    >>> miniMaxSum([5, 5, 5, 5, 5])
+    20 20
 """
 
 
@@ -11,13 +13,14 @@
 def miniMaxSum(arr):
     numbers = {}
 
-    for x in arr:
+    for x in range(0, 5):
         if x not in numbers:
             numbers[x] = 0
 
-        for y in arr:
-            if x == y:
-                continue
+        sums = arr[:]
+        sums.remove(sums[x])
+
+        for y in sums:
             numbers[x] += y
 
     numbers = sorted(numbers.items(), key=lambda x: x[1])
